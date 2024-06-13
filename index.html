@@ -160,12 +160,14 @@
             </div>
         </section>
     </main>
-    <div class="container-fluid">
+
+
+    <div class="container-fluid  "  id="menu">
         <div class="row  flex-nowrap">
             <div class="bg-dark col-auto col-md-4  col-lg-3   min-vh-100  d-flex flex-column  justify-content-between">
                 <div class="bg-dark p-2">
-                    <a class="flex align-items-center  text-decoration-none text-white mt-1">
-                        <span class="fs-4 d-none d-sm-inline">Sidemenu</span>
+                    <a class="flex align-items-center  text-decoration-none  text-white  mt-1">
+                        <i class="fa-solid fa-bars fs-4" onclick="disablemenu()" ></i><span class="fs-4 d-none d-sm-inline ms-4">Side menu</span>
                     </a>
                     <ul class="nav nav-pills flex-column mt-4">
                         <li class="nav-item  py-2 py-sm-1">
@@ -196,6 +198,18 @@
                     </ul>
 
                 </div>
+                <div class="dropdown open">
+                    <div class="dropdown open">
+                        <button  class="btn border-none btn-secondary dropdown-toggle"  type="button"     id="triggerId"     data-bs-toggle="dropdown"     aria-haspopup="true"     aria-expanded="false">
+                          <i class="fa-solid fa-user"></i><span class="ms-3">Sairab</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            <button class="dropdown-item" href="#">Setting</button>
+                            <button class="dropdown-item disabled" href="#">Profile</button>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </div>
@@ -203,6 +217,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <script src="script.js"></script>
 </body>
-
 </html>
