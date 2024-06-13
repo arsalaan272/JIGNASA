@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python in Browser</title>
+</head>
+<body>
+    <textarea id="code" placeholder="Type your Python code here..."></textarea>
+    <button id="run">Run</button>
+    <pre id="output"></pre>
+
+    <script type="text/javascript">
+        // Load Pyodide and initialize it
+        loadPyodide().then(async pyodide => {
+            document.getElementById('run').addEventListener('click', async () => {
+                let code = document.getElementById('code').value;
+                try {
+                    let results = await pyodide.runPythonAsync(code);
+                    document.getElementById('output').textContent = results;
+                } catch (err) {
+                    document.getElementById('output').textContent = err;
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.navbar a{
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.form-control 
+{
+        background-color: rgb(255, 255, 255);
+        outline: none;
+}
+
+.subnav a {
+    color: white;
+}
+.subnav a:hover {
+    color: rgb(164, 253, 253);
+}
+
+
